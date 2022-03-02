@@ -1,1 +1,71 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+#kjersti_square {
+  width: 100px;
+  height: 100px;
+  background: #b3b391;
+  position: relative;
+  -webkit-animation-name: movement;
+          animation-name: movement;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes movement {
+  0% {
+    background: #b3b391;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background: #c7c765 10%;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background: #e2b949;
+    border-radius: 50%;
+    opacity: 40%;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    opacity: 20%;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes movement {
+  0% {
+    background: #b3b391;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background: #c7c765 10%;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background: #e2b949;
+    border-radius: 50%;
+    opacity: 40%;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    opacity: 20%;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
