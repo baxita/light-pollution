@@ -112,3 +112,10 @@
 		flex-direction: row;
 	}
 }
+
+// Media query - for people who prefer a specific color scheme
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: rgb(41, 41, 41);
+	}
+}
