@@ -114,4 +114,15 @@
             transform: rotate(360deg);
   }
 }
+
+@media (prefers-reduced-motion) {
+  #kjersti_square {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #ida-square:after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
 /*# sourceMappingURL=index.css.map */

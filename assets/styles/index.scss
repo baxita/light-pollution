@@ -88,3 +88,19 @@
 		transform: rotate(360deg);
 	}
 }
+
+// * Media queries
+
+// Media query - for people who prefer less motion
+@media (prefers-reduced-motion) {
+	#kjersti_square {
+		animation: none;
+	}
+
+	#ida-square {
+		&:after {
+			// Animation
+			animation: none;
+		}
+	}
+}
