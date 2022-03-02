@@ -104,3 +104,11 @@
 		}
 	}
 }
+
+// Media query - for orientation
+@media (orientation: landscape) {
+	body {
+		display: flex;
+		flex-direction: row;
+	}
+}
