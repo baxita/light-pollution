@@ -114,4 +114,33 @@
             transform: rotate(360deg);
   }
 }
+
+@media (prefers-reduced-motion) {
+  #kjersti_square {
+    -webkit-animation: none;
+            animation: none;
+  }
+  #ida-square:after {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #292929;
+  }
+}
 /*# sourceMappingURL=index.css.map */
