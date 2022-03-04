@@ -1,0 +1,121 @@
+// Kjersti's square
+#kjersti_square {
+	width: 100px;
+	height: 100px;
+	background: rgb(179, 179, 145);
+	position: relative;
+	animation-name: movement;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+	0% {
+		background: rgb(179, 179, 145);
+		left: 0px;
+		top: 0px;
+	}
+
+	25% {
+		background: rgb(199, 199, 101) 10%;
+		left: 200px;
+		top: 0px;
+	}
+
+	50% {
+		background: rgb(226, 185, 73);
+		border-radius: 50%;
+		opacity: 40%;
+		left: 200px;
+		top: 200px;
+	}
+
+	75% {
+		opacity: 20%;
+		left: 0px;
+		top: 200px;
+	}
+
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+// Ida's square
+#ida-square {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+
+		// Background
+		background: conic-gradient(
+			rgba(255, 0, 0, 1),
+			rgba(255, 154, 0, 1),
+			rgba(208, 222, 33, 1),
+			rgba(79, 220, 74, 1),
+			rgba(63, 218, 216, 1),
+			rgba(47, 201, 226, 1),
+			rgba(28, 127, 238, 1),
+			rgba(95, 21, 242, 1),
+			rgba(186, 12, 248, 1),
+			rgba(251, 7, 217, 1),
+			rgba(255, 0, 0, 1)
+		);
+		background-size: cover;
+
+		// Animation
+		animation-name: psychedelic;
+		animation-duration: 10s;
+		animation-timing-function: ease;
+		animation-iteration-count: infinite;
+	}
+}
+
+@keyframes psychedelic {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// * Media queries
+
+// Media query - for people who prefer less motion
+@media (prefers-reduced-motion) {
+	#kjersti_square {
+		animation: none;
+	}
+
+	#ida-square {
+		&:after {
+			// Animation
+			animation: none;
+		}
+	}
+}
+
+// Media query - for orientation
+@media (orientation: landscape) {
+	body {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+// Media query - for people who prefer a specific color scheme
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: rgb(41, 41, 41);
+	}
+}
