@@ -1,0 +1,50 @@
+@import './colors';
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  scroll-padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background-color: $gradient-pollutedsky-base;
+}
+
+section {
+  min-height: 100vh;
+  max-height: 100vh;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  position: relative;
+
+  &:nth-of-type(1) {
+    background: $gradient-pollutedsky-s1;
+  }
+
+  &:nth-of-type(2) {
+    background: $gradient-pollutedsky-s2;
+  }
+
+  &:nth-of-type(3) {
+    background: $gradient-pollutedsky-s3;
+  }
+
+  &:nth-of-type(4) {
+    background: $gradient-pollutedsky-s4;
+  }
+}
+
+.side {
+  width: 50%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: inline-block;
+
+  &--right {
+    position: absolute;
+    right: 0;
+  }
+}
