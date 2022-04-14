@@ -9,5 +9,18 @@ $gradient-pollutedsky-s4: linear-gradient(180deg, #466078 0%, #9e7543 100%);
 $gradient-clearsky-base: #1554b6;
 $gradient-clearsky-s1: linear-gradient(180deg, #20304f 0%, #0d49ae 100%);
 $gradient-clearsky-s2: linear-gradient(180deg, #0d48ac 0%, #114088 100%);
-$gradient-clearsky-s3: linear-gradient(180deg, #12418A 0%, #1554B6 48.44%);
+$gradient-clearsky-s3: linear-gradient(180deg, #12418a 0%, #1554b6 48.44%);
 $gradient-clearsky-s4: linear-gradient(180deg, #12418a 0%, #1554b6 48.44%);
+
+// Button gradients
+$gradient-pollutedsky-button: linear-gradient(
+  98.16deg,
+  #96856c 21.39%,
+  #3a505c 93.76%
+);
+$gradient-clearsky-button: linear-gradient(
+  98.02deg,
+  #227696 29.92%,
+  #3b6691 53.43%,
+  #6d4586 96.31%
+);
