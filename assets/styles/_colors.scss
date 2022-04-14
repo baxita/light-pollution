@@ -1,2 +1,13 @@
-$gradient-clearsky: linear-gradient(180deg, #20304F 3.12%, #0D4DBC 20.82%, #0C3D89 34.51%, #113F85 48.63%, #1556BB 64.85%, #0A3C89 83.4%, #0860E8 100%);
-$gradient-pollutedsky: linear-gradient(180deg, #9F7942 0%, #945050 38.02%, #456079 75.52%, #9E7543 100%);
+// Polluted sky gradients
+$gradient-pollutedsky-base: #9e7543;
+$gradient-pollutedsky-s1: linear-gradient(180deg, #9f7942 0%, #975e4b 100%);
+$gradient-pollutedsky-s2: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
+$gradient-pollutedsky-s3: linear-gradient(180deg, #7a555d 0%, #466078 100%);
+$gradient-pollutedsky-s4: linear-gradient(180deg, #466078 0%, #9e7543 100%);
+
+// Clear sky gradients
+$gradient-clearsky-base: #1554b6;
+$gradient-clearsky-s1: linear-gradient(180deg, #20304f 0%, #0d49ae 100%);
+$gradient-clearsky-s2: linear-gradient(180deg, #0d48ac 0%, #114088 100%);
+$gradient-clearsky-s3: linear-gradient(180deg, #12418A 0%, #1554B6 48.44%);
+$gradient-clearsky-s4: linear-gradient(180deg, #12418a 0%, #1554b6 48.44%);
