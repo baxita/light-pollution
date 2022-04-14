@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -52,5 +53,101 @@ section:nth-of-type(4) {
 .side--right {
   position: absolute;
   right: 0;
+}
+
+.dimmed {
+  display: none;
+}
+
+.polluted {
+  display: inline-block;
+}
+
+h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1000;
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 24px;
+  color: white;
+  width: 600px;
+  line-height: 1.5;
+  text-shadow: 0px 5px 6px black;
+  text-align: center;
+}
+
+p.direction {
+  font-size: 18px;
+  top: 70%;
+  text-shadow: none;
+}
+
+p.direction-reload {
+  top: 93%;
+}
+
+p.author {
+  top: 65%;
+  text-align: right;
+}
+
+button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
+  font-family: "Red Hat Text", sans-serif;
+  background: linear-gradient(98.16deg, #96856c 21.39%, #3a505c 93.76%);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 15px;
+  -webkit-transition: -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  -webkit-transform: translate(-50%, calc(-50% - 2px));
+          transform: translate(-50%, calc(-50% - 2px));
+  -webkit-box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transform: translate(-50%, calc(-50% + 4px));
+          transform: translate(-50%, calc(-50% + 4px));
+}
+
+button.dimmed {
+  background: linear-gradient(98.02deg, #227696 29.92%, #3b6691 53.43%, #6d4586 96.31%);
+  top: 80%;
 }
 /*# sourceMappingURL=index.css.map */
