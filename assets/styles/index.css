@@ -20,6 +20,7 @@ section {
           box-sizing: border-box;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
 }
 
 section:nth-of-type(1) {
@@ -48,11 +49,19 @@ section:nth-of-type(4) {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
+  position: absolute;
+}
+
+.side--left {
+  left: -100%;
+  -webkit-transition: left 4s;
+  transition: left 4s;
 }
 
 .side--right {
-  position: absolute;
-  right: 0;
+  right: -100%;
+  -webkit-transition: right 4s;
+  transition: right 4s;
 }
 
 .dimmed {
@@ -90,12 +99,16 @@ p {
   line-height: 1.5;
   text-shadow: 0px 5px 6px black;
   text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 4s;
+  transition: opacity 4s;
 }
 
 p.direction {
   font-size: 18px;
   top: 70%;
   text-shadow: none;
+  opacity: 1;
 }
 
 p.direction-reload {
@@ -125,10 +138,11 @@ button {
   border: none;
   padding: 12px 35px;
   border-radius: 15px;
-  -webkit-transition: -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
-  transition: box-shadow 0.2s, transform 0.2s;
-  transition: box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  opacity: 0;
+  -webkit-transition: opacity 2s 7s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: opacity 2s 7s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s;
+  transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
 }
 
 button:hover {
@@ -149,5 +163,17 @@ button:active {
 button.dimmed {
   background: linear-gradient(98.02deg, #227696 29.92%, #3b6691 53.43%, #6d4586 96.31%);
   top: 80%;
+}
+
+.show {
+  opacity: 1;
+}
+
+.slide-left {
+  left: 0;
+}
+
+.slide-right {
+  right: 0;
 }
 /*# sourceMappingURL=index.css.map */
