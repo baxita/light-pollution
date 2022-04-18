@@ -29,6 +29,7 @@ section {
   box-sizing: border-box;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
 
   &:nth-of-type(1) {
     background: $gradient-pollutedsky-s1;
@@ -52,10 +53,20 @@ section {
   height: 100vh;
   box-sizing: border-box;
   display: inline-block;
+  position: absolute;
+
+  &--left {
+    left: -100%;
+    transition: left 4s;
+    // ! TODO: remove - used for testing !!
+    // background-color: rgba(255, 255, 255, 0.24);
+  }
 
   &--right {
-    position: absolute;
-    right: 0;
+    right: -100%;
+    transition: right 4s;
+    // ! TODO: remove - used for testing !!
+    // background-color: rgba(0, 0, 0, 0.247);
   }
 }
 
@@ -91,12 +102,15 @@ p {
   line-height: 1.5;
   text-shadow: 0px 5px 6px black;
   text-align: center;
+  opacity: 0;
+  transition: opacity 4s;
 
   // Directions
   &.direction {
     font-size: 18px;
     top: 70%;
     text-shadow: none;
+    opacity: 1;
 
     &-reload {
       top: 93%;
@@ -122,7 +136,8 @@ button {
   border: none;
   padding: 12px 35px;
   border-radius: 15px;
-  transition: box-shadow 0.2s, transform 0.2s;
+  opacity: 0;
+  transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s;
 
   &:hover {
     cursor: pointer;
@@ -138,5 +153,20 @@ button {
   &.dimmed {
     background: $gradient-clearsky-button;
     top: 80%;
+  }
+}
+
+// * Intersection observer classes
+.show {
+  opacity: 1;
+}
+
+.slide {
+  &-left {
+    left: 0;
+  }
+
+  &-right {
+    right: 0;
   }
 }
