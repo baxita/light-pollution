@@ -48,6 +48,20 @@ section {
   }
 }
 
+// Intro-page arrow
+#arrow {
+  position: absolute;
+  // transform: translate(48.3vw, 75vh);
+  top: 78%;
+  left: 48%;
+  width: 3.3vw;
+  animation: arrowMove 2s infinite alternate;
+}
+@keyframes arrowMove {
+  0% {transform: translateY(0)}
+  100% {transform: translateY(-4vh)}
+}
+
 .side {
   width: 50%;
   height: 100vh;
@@ -68,13 +82,65 @@ section {
     // ! TODO: remove - used for testing !!
     // background-color: rgba(0, 0, 0, 0.247);
   }
+  & > #right-room,
+  & > #left-room {
+    width: 50vw;
+    position: absolute;
+    top: 0;
+  }
+  & > #right-room {
+    right: 0;
+  }
+  & > #left-room {
+    left: 0;
+  }
+  & > #light-window {
+    position: absolute;
+    transform: translate(23%, 14%);
+    width: 50.5vw;
+    z-index: 3;
+    // Make light visible after room is placed in viewport
+    animation: windowLight 0s 7s forwards;
+    visibility: hidden;
+  }
+
+  @keyframes windowLight {
+  to   { visibility: visible; }
+  }
+
+  & > #bed {
+    position: absolute;
+    transform: translate(20%, 99.5%);
+    width: 57vw;
+    z-index: 1;
+  }
+
+  & > #light-door {
+    position: absolute;
+    transform: translate(-60%, 58.5%);
+    width: 98.35vw;
+    z-index: 2;
+    visibility: hidden;
+    // Make light visible after room is placed in viewport
+    animation: doorLight 0s 7s forwards;
+   
+  }
+  @keyframes doorLight {
+  to   { visibility: visible; }
+  }
 }
 
 // * Visibility
 .dimmed {
   display: none;
 }
-
+//! TO DO: ser ikke hvor den havner
+#reload {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  width: 2.1vw
+}
 // !! TODO: remove - used for testing !!
 .polluted {
   display: inline-block;
