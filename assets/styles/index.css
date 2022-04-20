@@ -43,6 +43,20 @@ section:nth-of-type(4) {
   background: linear-gradient(180deg, #466078 0%, #9e7543 100%);
 }
 
+#arrow {
+  position: absolute;
+  top: 78%;
+  left: 48.5%;
+  width: 3.3vw;
+}
+
+#reload {
+  position: absolute;
+  top: 88%;
+  left: 48.9%;
+  width: 2.1vw;
+}
+
 .side {
   width: 50%;
   height: 100vh;
