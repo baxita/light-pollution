@@ -43,6 +43,37 @@ section:nth-of-type(4) {
   background: linear-gradient(180deg, #466078 0%, #9e7543 100%);
 }
 
+#arrow {
+  position: absolute;
+  top: 78%;
+  left: 48%;
+  width: 3.3vw;
+  -webkit-animation: arrowMove 2s infinite alternate;
+          animation: arrowMove 2s infinite alternate;
+}
+
+@-webkit-keyframes arrowMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-4vh);
+            transform: translateY(-4vh);
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-4vh);
+            transform: translateY(-4vh);
+  }
+}
+
 .side {
   width: 50%;
   height: 100vh;
@@ -64,8 +95,84 @@ section:nth-of-type(4) {
   transition: right 4s;
 }
 
+.side > #right-room,
+.side > #left-room {
+  width: 50vw;
+  position: absolute;
+  top: 0;
+}
+
+.side > #right-room {
+  right: 0;
+}
+
+.side > #left-room {
+  left: 0;
+}
+
+.side > #light-window {
+  position: absolute;
+  -webkit-transform: translate(23%, 14%);
+          transform: translate(23%, 14%);
+  width: 50.5vw;
+  z-index: 3;
+  -webkit-animation: windowLight 0s 7s forwards;
+          animation: windowLight 0s 7s forwards;
+  visibility: hidden;
+}
+
+@-webkit-keyframes windowLight {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes windowLight {
+  to {
+    visibility: visible;
+  }
+}
+
+.side > #bed {
+  position: absolute;
+  -webkit-transform: translate(20%, 99.5%);
+          transform: translate(20%, 99.5%);
+  width: 57vw;
+  z-index: 1;
+}
+
+.side > #light-door {
+  position: absolute;
+  -webkit-transform: translate(-60%, 58.5%);
+          transform: translate(-60%, 58.5%);
+  width: 98.35vw;
+  z-index: 2;
+  visibility: hidden;
+  -webkit-animation: doorLight 0s 7s forwards;
+          animation: doorLight 0s 7s forwards;
+}
+
+@-webkit-keyframes doorLight {
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes doorLight {
+  to {
+    visibility: visible;
+  }
+}
+
 .dimmed {
   display: none;
+}
+
+#reload {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  width: 2.1vw;
 }
 
 .polluted {
