@@ -48,6 +48,24 @@ section {
   }
 }
 
+//introduction-page polluted arrow indicate scroll
+//! TODO: add animation in later issue
+#arrow {
+  position: absolute;
+  top: 78%;
+  left: 48%;
+  width: 3.3vw;
+}
+
+//finalpage-dimmed reload-icon
+//! TODO: add animation in later issue
+#reload {
+  position: absolute;
+  top: 88%;
+  left: 48.6%;
+  width: 2.1vw;
+}
+
 .side {
   width: 50%;
   height: 100vh;
