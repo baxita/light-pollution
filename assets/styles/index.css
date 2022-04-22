@@ -78,6 +78,28 @@ section:nth-of-type(3) img#small-turtle {
   right: 10%;
 }
 
+section:nth-of-type(3) #flare-moonbeam {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40vh solid transparent;
+  border-right: 40vh solid transparent;
+  border-bottom: calc(100vh - (4vw + 8vw)) solid #f5f5c9;
+  opacity: 0.1;
+  bottom: 0;
+  left: calc(50vw - (40vh));
+}
+
+section:nth-of-type(3) .moon {
+  position: absolute;
+  left: calc(50vw - (8vw / 2));
+  top: 4vw;
+  width: 8vw;
+  height: 8vw;
+  background-color: #f5f5c9;
+  border-radius: 100%;
+}
+
 section:nth-of-type(4) {
   background: -webkit-gradient(linear, left top, left bottom, from(#466078), to(#9e7543));
   background: linear-gradient(180deg, #466078 0%, #9e7543 100%);

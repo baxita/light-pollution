@@ -81,6 +81,29 @@ section {
         right: 10%;
       }
     }
+
+    // TODO: switch out moon sizing w/ variable?
+    & #flare-moonbeam {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 40vh solid transparent;
+      border-right: 40vh solid transparent;
+      border-bottom: calc(100vh - (4vw + 8vw)) solid #f5f5c9;
+      opacity: 0.1;
+      bottom: 0;
+      left: calc(50vw - (40vh));
+    }
+
+    & .moon {
+      position: absolute;
+      left: calc(50vw - (8vw / 2));
+      top: 4vw;
+      width: 8vw;
+      height: 8vw;
+      background-color: #f5f5c9;
+      border-radius: 100%;
+    }
   }
 
   &:nth-of-type(4) {
