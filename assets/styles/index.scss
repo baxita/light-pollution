@@ -120,6 +120,42 @@ section {
 
   &:nth-of-type(4) {
     background: $gradient-pollutedsky-s4;
+
+    & .side--left {
+      z-index: 2;
+    }
+
+    & img {
+      @include lightbeamFade();
+      position: absolute;
+
+      &#city-front {
+        max-width: 70vw;
+        bottom: 0;
+      }
+
+      &#city-back {
+        max-width: 60vw;
+        bottom: 0;
+        right: 0;
+      }
+
+      &#city-landscape {
+        width: 100vw;
+        right: 0;
+        bottom: 25vw;
+      }
+
+      &#light-beam-left {
+        bottom: 26vw;
+        left: 0;
+      }
+
+      &#light-beam-right {
+        height: 100vh;
+        right: 0;
+      }
+    }
   }
 }
 
@@ -147,13 +183,13 @@ section {
 
 // * Visibility
 .dimmed {
-  // display: inline-block;
+  display: inline-block;
   display: none;
 }
 
 // !! TODO: remove - used for testing !!
 .polluted {
-  // display: none;
+  display: none;
   display: inline-block;
 }
 
