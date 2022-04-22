@@ -9,6 +9,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin lightbeamFade() {
+  &.lightbeam {
+    opacity: 0;
+    transition: opacity 2s 4s;
+  }
+
+  &.lightbeam:nth-of-type(2) {
+    transition: opacity 2s 5s;
+  }
+}
+
 // Layout
 html {
   scroll-behavior: smooth;
@@ -43,16 +54,12 @@ section {
     background: $gradient-pollutedsky-s3;
 
     & img {
+      @include lightbeamFade();
       position: absolute;
 
       &.bg-img {
         bottom: 0;
         width: 100%;
-      }
-
-      &.lightbeam {
-        opacity: 0;
-        transition: opacity 2s 4s;
       }
 
       &#lightbeam-far {
