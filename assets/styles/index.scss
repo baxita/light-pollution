@@ -50,6 +50,11 @@ section {
         width: 100%;
       }
 
+      &.lightbeam {
+        opacity: 0;
+        transition: opacity 2s 4s;
+      }
+
       &#lightbeam-far {
         height: 38vw;
         left: 5.5vw;
@@ -135,11 +140,13 @@ section {
 
 // * Visibility
 .dimmed {
+  // display: inline-block;
   display: none;
 }
 
 // !! TODO: remove - used for testing !!
 .polluted {
+  // display: none;
   display: inline-block;
 }
 
@@ -221,7 +228,7 @@ button {
 
 // * Intersection observer classes
 .show {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .slide {
