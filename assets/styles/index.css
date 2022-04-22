@@ -42,15 +42,20 @@ section:nth-of-type(3) img {
   position: absolute;
 }
 
-section:nth-of-type(3) img.bg-img {
-  bottom: 0;
-  width: 100%;
-}
-
 section:nth-of-type(3) img.lightbeam {
   opacity: 0;
   -webkit-transition: opacity 2s 4s;
   transition: opacity 2s 4s;
+}
+
+section:nth-of-type(3) img.lightbeam:nth-of-type(2) {
+  -webkit-transition: opacity 2s 5s;
+  transition: opacity 2s 5s;
+}
+
+section:nth-of-type(3) img.bg-img {
+  bottom: 0;
+  width: 100%;
 }
 
 section:nth-of-type(3) img#lightbeam-far {
@@ -111,6 +116,56 @@ section:nth-of-type(4) {
   background: linear-gradient(180deg, #466078 0%, #9e7543 100%);
 }
 
+section:nth-of-type(4) .side--left {
+  z-index: 2;
+}
+
+section:nth-of-type(4) img {
+  position: absolute;
+}
+
+section:nth-of-type(4) img.lightbeam {
+  opacity: 0;
+  -webkit-transition: opacity 2s 4s;
+  transition: opacity 2s 4s;
+}
+
+section:nth-of-type(4) img.lightbeam:nth-of-type(2) {
+  -webkit-transition: opacity 2s 5s;
+  transition: opacity 2s 5s;
+}
+
+section:nth-of-type(4) img#city-front {
+  max-width: 70vw;
+  bottom: 0;
+}
+
+section:nth-of-type(4) img#city-back {
+  max-width: 60vw;
+  bottom: 0;
+  right: 0;
+}
+
+section:nth-of-type(4) img#city-landscape {
+  width: 100vw;
+  right: 0;
+  bottom: 25vw;
+}
+
+section:nth-of-type(4) img#light-beam-left {
+  bottom: 26vw;
+  left: 0;
+}
+
+section:nth-of-type(4) img#light-beam-right {
+  height: 100vh;
+  right: 0;
+}
+
+section:nth-of-type(4) img#shootingstar {
+  left: -100%;
+}
+
 .side {
   width: 50%;
   height: 100vh;
@@ -133,10 +188,12 @@ section:nth-of-type(4) {
 }
 
 .dimmed {
+  display: inline-block;
   display: none;
 }
 
 .polluted {
+  display: none;
   display: inline-block;
 }
 

@@ -9,6 +9,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin lightbeamFade() {
+  &.lightbeam {
+    opacity: 0;
+    transition: opacity 2s 4s;
+  }
+
+  &.lightbeam:nth-of-type(2) {
+    transition: opacity 2s 5s;
+  }
+}
+
 // Layout
 html {
   scroll-behavior: smooth;
@@ -43,16 +54,12 @@ section {
     background: $gradient-pollutedsky-s3;
 
     & img {
+      @include lightbeamFade();
       position: absolute;
 
       &.bg-img {
         bottom: 0;
         width: 100%;
-      }
-
-      &.lightbeam {
-        opacity: 0;
-        transition: opacity 2s 4s;
       }
 
       &#lightbeam-far {
@@ -113,6 +120,47 @@ section {
 
   &:nth-of-type(4) {
     background: $gradient-pollutedsky-s4;
+
+    & .side--left {
+      z-index: 2;
+    }
+
+    & img {
+      @include lightbeamFade();
+      position: absolute;
+
+      &#city-front {
+        max-width: 70vw;
+        bottom: 0;
+      }
+
+      &#city-back {
+        max-width: 60vw;
+        bottom: 0;
+        right: 0;
+      }
+
+      &#city-landscape {
+        width: 100vw;
+        right: 0;
+        bottom: 25vw;
+      }
+
+      &#light-beam-left {
+        bottom: 26vw;
+        left: 0;
+      }
+
+      &#light-beam-right {
+        height: 100vh;
+        right: 0;
+      }
+
+      // TODO: animate star (move into and across screen)
+      &#shootingstar {
+        left: -100%;
+      }
+    }
   }
 }
 
@@ -140,13 +188,13 @@ section {
 
 // * Visibility
 .dimmed {
-  // display: inline-block;
+  display: inline-block;
   display: none;
 }
 
 // !! TODO: remove - used for testing !!
 .polluted {
-  // display: none;
+  display: none;
   display: inline-block;
 }
 
