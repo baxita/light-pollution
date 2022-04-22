@@ -41,6 +41,74 @@ section {
 
   &:nth-of-type(3) {
     background: $gradient-pollutedsky-s3;
+
+    & img {
+      position: absolute;
+
+      &.bg-img {
+        bottom: 0;
+        width: 100%;
+      }
+
+      &.lightbeam {
+        opacity: 0;
+        transition: opacity 2s 4s;
+      }
+
+      &#lightbeam-far {
+        height: 38vw;
+        left: 5.5vw;
+        bottom: 0;
+      }
+
+      &#lightbeam-close {
+        height: 36vw;
+        right: 13vw;
+        bottom: 0;
+      }
+
+      &#large-turtle {
+        width: 50%;
+        max-width: 350px;
+        bottom: 10%;
+        right: 10%;
+      }
+
+      &#medium-turtle {
+        width: 15%;
+        bottom: 5vw;
+        right: 10%;
+      }
+
+      &#small-turtle {
+        width: 10%;
+        bottom: 10vw;
+        right: 10%;
+      }
+    }
+
+    // TODO: switch out moon sizing w/ variable?
+    & #flare-moonbeam {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 40vh solid transparent;
+      border-right: 40vh solid transparent;
+      border-bottom: calc(100vh - (4vw + 8vw)) solid #f5f5c9;
+      opacity: 0.1;
+      bottom: 0;
+      left: calc(50vw - (40vh));
+    }
+
+    & .moon {
+      position: absolute;
+      left: calc(50vw - (8vw / 2));
+      top: 4vw;
+      width: 8vw;
+      height: 8vw;
+      background-color: #f5f5c9;
+      border-radius: 100%;
+    }
   }
 
   &:nth-of-type(4) {
@@ -72,11 +140,13 @@ section {
 
 // * Visibility
 .dimmed {
+  // display: inline-block;
   display: none;
 }
 
 // !! TODO: remove - used for testing !!
 .polluted {
+  // display: none;
   display: inline-block;
 }
 
@@ -158,7 +228,7 @@ button {
 
 // * Intersection observer classes
 .show {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .slide {
