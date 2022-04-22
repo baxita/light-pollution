@@ -155,6 +155,11 @@ section {
         height: 100vh;
         right: 0;
       }
+
+      // TODO: animate star (move into and across screen)
+      &#shootingstar {
+        left: -100%;
+      }
     }
   }
 }
