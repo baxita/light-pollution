@@ -8,6 +8,7 @@ const sectionObserver = new IntersectionObserver(
       const leftSide = entry.target.querySelector('.side--left')
       const rightSide = entry.target.querySelector('.side--right')
       const button = entry.target.querySelector('button.polluted')
+      const lightbeams = entry.target.querySelectorAll('.lightbeam')
 
       if (!entry.isIntersecting) {
         quotes.forEach((quote) => {
@@ -26,6 +27,12 @@ const sectionObserver = new IntersectionObserver(
 
       if (button) {
         button.classList.add('show')
+      }
+
+      if (lightbeams) {
+        lightbeams.forEach((lightbeam) => {
+          lightbeam.classList.add('show')
+        })
       }
     })
   },

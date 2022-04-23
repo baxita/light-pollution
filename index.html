@@ -20,11 +20,12 @@
           artificial light.
         </p>
         <p class="polluted direction">Scroll down to learn more</p>
-        <!-- <img
+        <img
+          id="arrow_intro"
           class="polluted"
           src="assets/images/section_1/arrow_intro.svg"
-          alt=""
-        /> -->
+          alt="arrow-scroll"
+        />
 
         <!-- Dimmed -->
         <p class="dimmed">
@@ -34,11 +35,12 @@
         </p>
         <p class="dimmed author">- Vincent van Gogh</p>
         <button class="dimmed">Read more</button>
-        <!-- <img
+        <img
+          id="reload_arrow"
           class="dimmed"
           src="assets/images/section_1/reload_arrow.svg"
-          alt=""
-        /> -->
+          alt="reload-icon"
+        />
         <p class="dimmed direction direction-reload">Reload page</p>
       </section>
 
@@ -96,32 +98,46 @@
       <!-- Section 3 - Animal disorientation -->
       <section>
         <div class="side side--left">
-          <!-- <img src="assets/images/section_3/left-side_ocean.svg" alt="" /> -->
-          <!-- <img src="assets/images/section_3/sea-turtle.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_3/lightbeam-far.svg"
+          <img
+            src="assets/images/section_3/left-side_ocean.svg"
             alt=""
-          /> -->
-
-          <!-- Moon / moonbeam -->
-          <div class="dimmed"></div>
-          <!-- <img
-            class="dimmed"
-            src="assets/images/section_3/flare_moonbeam.svg"
+            class="bg-img"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
             alt=""
-          /> -->
+            id="large-turtle"
+          />
         </div>
         <div class="side side--right">
-          <!-- <img src="assets/images/section_3/right-side_ocean.svg" alt="" /> -->
-          <!-- <img src="assets/images/section_3/sea-turtle.svg" alt="" /> -->
-          <!-- <img src="assets/images/section_3/sea-turtle.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_3/lightbeam-close.svg"
+          <img
+            src="assets/images/section_3/right-side_ocean.svg"
             alt=""
-          /> -->
+            class="bg-img"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
+            alt=""
+            id="small-turtle"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
+            alt=""
+            id="medium-turtle"
+          />
         </div>
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_3/lightbeam-far.svg"
+          alt=""
+          id="lightbeam-far"
+        />
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_3/lightbeam-close.svg"
+          alt=""
+          id="lightbeam-close"
+        />
         <p class="polluted">
           Light pollution can disorient animals and cause problems when they try
           to navigate in the wild. Many species use the horizon and stars for
@@ -139,37 +155,48 @@
           hatchlings have a better chance of surviving and finding the way back
           to the ocean and their group.
         </p>
+        <div class="moon dimmed"></div>
+        <div id="flare-moonbeam" class="dimmed"></div>
       </section>
 
       <!-- Section 4 - The night sky -->
       <section>
         <div class="side side--left">
-          <!-- <img src="assets/images/section_4/city-front.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_4/light-beam-left.svg"
+          <img
+            src="assets/images/section_4/city-front.svg"
             alt=""
-          /> -->
-          <!-- <img
-            class="dimmed"
-            src="assets/images/section_4/shootingstar.svg"
-            alt=""
-          /> -->
+            id="city-front"
+          />
         </div>
         <div class="side side--right">
-          <!-- <img src="assets/images/section_4/city-landscape.svg" alt="" /> -->
-          <!-- <img src="assets/images/section_4/city-back.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_4/light-beam-right.svg"
+          <img
+            src="assets/images/section_4/city-landscape.svg"
             alt=""
-          /> -->
+            id="city-landscape"
+          />
+          <img
+            src="assets/images/section_4/city-back.svg"
+            alt=""
+            id="city-back"
+          />
         </div>
         <p class="polluted">
           More than 80% of the world and more than 99% of the U.S. and European
           populations live under light-polluted skies.
         </p>
         <button class="polluted">Dim the lights</button>
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_4/light-beam-left.svg"
+          alt=""
+          id="light-beam-left"
+        />
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_4/light-beam-right.svg"
+          alt=""
+          id="light-beam-right"
+        />
 
         <!-- Dimmed -->
         <p class="dimmed">
@@ -177,6 +204,12 @@
           sky. This will increase our chances of seeing natural phenomenons like
           shooting stars, the milky way or the northern lights.
         </p>
+        <img
+          class="dimmed"
+          src="assets/images/section_4/shootingstar.svg"
+          alt=""
+          id="shootingstar"
+        />
       </section>
     </main>
 

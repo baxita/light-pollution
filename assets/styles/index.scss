@@ -9,6 +9,17 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin lightbeamFade() {
+  &.lightbeam {
+    opacity: 0;
+    transition: opacity 2s 4s;
+  }
+
+  &.lightbeam:nth-of-type(2) {
+    transition: opacity 2s 5s;
+  }
+}
+
 // Layout
 html {
   scroll-behavior: smooth;
@@ -33,6 +44,20 @@ section {
 
   &:nth-of-type(1) {
     background: $gradient-pollutedsky-s1;
+
+    //introduction-page polluted arrow indicate scroll
+    //! TODO: add animation in later issue
+    & #arrow_intro {
+      @include centering(78%);
+      width: 2.5vw;
+    }
+
+    //finalpage-dimmed reload-icon
+    //! TODO: add animation in later issue
+    & #reload_arrow {
+      @include centering(88%);
+      width: 2.1vw;
+    }
   }
 
   &:nth-of-type(2) {
@@ -85,10 +110,115 @@ section {
 
   &:nth-of-type(3) {
     background: $gradient-pollutedsky-s3;
+
+    & img {
+      @include lightbeamFade();
+      position: absolute;
+
+      &.bg-img {
+        bottom: 0;
+        width: 100%;
+      }
+
+      &#lightbeam-far {
+        height: 38vw;
+        left: 5.5vw;
+        bottom: 0;
+      }
+
+      &#lightbeam-close {
+        height: 36vw;
+        right: 13vw;
+        bottom: 0;
+      }
+
+      &#large-turtle {
+        width: 50%;
+        max-width: 350px;
+        bottom: 10%;
+        right: 10%;
+      }
+
+      &#medium-turtle {
+        width: 15%;
+        bottom: 5vw;
+        right: 10%;
+      }
+
+      &#small-turtle {
+        width: 10%;
+        bottom: 10vw;
+        right: 10%;
+      }
+    }
+
+    // TODO: switch out moon sizing w/ variable?
+    & #flare-moonbeam {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 40vh solid transparent;
+      border-right: 40vh solid transparent;
+      border-bottom: calc(100vh - (4vw + 8vw)) solid #f5f5c9;
+      opacity: 0.1;
+      bottom: 0;
+      left: calc(50vw - (40vh));
+    }
+
+    & .moon {
+      position: absolute;
+      left: calc(50vw - (8vw / 2));
+      top: 4vw;
+      width: 8vw;
+      height: 8vw;
+      background-color: #f5f5c9;
+      border-radius: 100%;
+    }
   }
 
   &:nth-of-type(4) {
     background: $gradient-pollutedsky-s4;
+
+    & .side--left {
+      z-index: 2;
+    }
+
+    & img {
+      @include lightbeamFade();
+      position: absolute;
+
+      &#city-front {
+        max-width: 70vw;
+        bottom: 0;
+      }
+
+      &#city-back {
+        max-width: 60vw;
+        bottom: 0;
+        right: 0;
+      }
+
+      &#city-landscape {
+        width: 100vw;
+        right: 0;
+        bottom: 25vw;
+      }
+
+      &#light-beam-left {
+        bottom: 26vw;
+        left: 0;
+      }
+
+      &#light-beam-right {
+        height: 100vh;
+        right: 0;
+      }
+
+      // TODO: animate star (move into and across screen)
+      &#shootingstar {
+        left: -100%;
+      }
+    }
   }
 }
 
@@ -116,11 +246,13 @@ section {
 
 // * Visibility
 .dimmed {
+  display: inline-block;
   display: none;
 }
 
 // !! TODO: remove - used for testing !!
 .polluted {
+  display: none;
   display: inline-block;
 }
 
@@ -202,7 +334,7 @@ button {
 
 // * Intersection observer classes
 .show {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .slide {
