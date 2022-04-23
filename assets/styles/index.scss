@@ -33,6 +33,24 @@ section {
 
   &:nth-of-type(1) {
     background: $gradient-pollutedsky-s1;
+
+    //introduction-page polluted arrow indicate scroll
+    //! TODO: add animation in later issue
+    & #arrow {
+      position: absolute;
+      top: 78%;
+      left: 48%;
+      width: 2.5vw;
+    }
+
+    //finalpage-dimmed reload-icon
+    //! TODO: add animation in later issue
+    & #reload {
+      position: absolute;
+      top: 88%;
+      left: 48.6%;
+      width: 2.1vw;
+    }
   }
 
   &:nth-of-type(2) {
@@ -46,24 +64,6 @@ section {
   &:nth-of-type(4) {
     background: $gradient-pollutedsky-s4;
   }
-}
-
-//introduction-page polluted arrow indicate scroll
-//! TODO: add animation in later issue
-#arrow {
-  position: absolute;
-  top: 78%;
-  left: 48%;
-  width: 3.3vw;
-}
-
-//finalpage-dimmed reload-icon
-//! TODO: add animation in later issue
-#reload {
-  position: absolute;
-  top: 88%;
-  left: 48.6%;
-  width: 2.1vw;
 }
 
 .side {
