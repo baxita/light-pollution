@@ -1,1 +1,42 @@
-//here comes animation keyframes etc.
+// * Animations
+// Stars
+@keyframes blinking-star {
+  from {
+    transform: scale(0.00001);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes bigger-blinking-star {
+  from {
+    transform: scale(0.00001);
+  }
+
+  to {
+    transform: scale(2);
+  }
+}
+
+// Northern lights
+@keyframes northern-lights-move {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+
+  to {
+    transform: translateY(50%) translateX(25%);
+  }
+}
+
+@keyframes northern-lights-fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.2;
+  }
+}
