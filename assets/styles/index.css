@@ -51,6 +51,45 @@ section:nth-of-type(2) {
   background: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
 }
 
+section:nth-of-type(2) .side--left {
+  z-index: 2;
+}
+
+section:nth-of-type(2) img {
+  position: absolute;
+}
+
+section:nth-of-type(2) img#right-side_room {
+  right: 0;
+  height: 100vh;
+}
+
+section:nth-of-type(2) img#left-side_room {
+  left: 0;
+  height: 100vh;
+}
+
+section:nth-of-type(2) img#bed-human {
+  max-width: 100%;
+  width: 1000px;
+  bottom: 1vw;
+  left: 17%;
+}
+
+section:nth-of-type(2) img#light-beam-doorway {
+  height: 63vh;
+  bottom: 0;
+  right: 21vh;
+  z-index: 3;
+}
+
+section:nth-of-type(2) img#light-beam-window {
+  height: 89.5vh;
+  right: 54.2vh;
+  bottom: 0;
+  z-index: 4;
+}
+
 section:nth-of-type(3) {
   background: -webkit-gradient(linear, left top, left bottom, from(#7a555d), to(#466078));
   background: linear-gradient(180deg, #7a555d 0%, #466078 100%);
