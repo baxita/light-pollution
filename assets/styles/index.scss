@@ -81,16 +81,17 @@ section {
       }
     }
 
-    //! TODO: add animation in later issue
     & #arrow_intro {
       @include centering(78%);
       width: 2.5vw;
+      animation: arrowMove 2s infinite alternate;
     }
 
-    //! TODO: add animation in later issue
     & #reload_arrow {
       @include centering(88%);
       width: 2.1vw;
+      animation: spin 5000ms infinite linear;
+      animation-delay: 15s;
     }
   }
 
