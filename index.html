@@ -42,6 +42,9 @@
           alt="reload-icon"
         />
         <p class="dimmed direction direction-reload">Reload page</p>
+
+        <!-- Northern lights -->
+        <div id="northern-lights" class="dimmed"></div>
       </section>
 
       <!-- Section 2 - Human health -->
@@ -107,6 +110,7 @@
             src="assets/images/section_3/sea-turtle.svg"
             alt=""
             id="large-turtle"
+            class="turtle"
           />
         </div>
         <div class="side side--right">
@@ -119,11 +123,13 @@
             src="assets/images/section_3/sea-turtle.svg"
             alt=""
             id="small-turtle"
+            class="turtle"
           />
           <img
             src="assets/images/section_3/sea-turtle.svg"
             alt=""
             id="medium-turtle"
+            class="turtle"
           />
         </div>
         <img
@@ -180,11 +186,11 @@
             id="city-back"
           />
         </div>
-        <p class="polluted">
+        <p class="polluted polluted--fade">
           More than 80% of the world and more than 99% of the U.S. and European
           populations live under light-polluted skies.
         </p>
-        <button class="polluted">Dim the lights</button>
+        <button class="polluted" id="lightswitch">Dim the lights</button>
         <img
           class="polluted lightbeam"
           src="assets/images/section_4/light-beam-left.svg"
@@ -199,16 +205,16 @@
         />
 
         <!-- Dimmed -->
-        <p class="dimmed">
+        <p class="dimmed dimmed--fade">
           Without light pollution, we get to see more of the incredible night
           sky. This will increase our chances of seeing natural phenomenons like
           shooting stars, the milky way or the northern lights.
         </p>
         <img
           class="dimmed"
-          src="assets/images/section_4/shootingstar.svg"
+          src="assets/images/section_4/shooting-star.svg"
           alt=""
-          id="shootingstar"
+          id="shooting-star"
         />
       </section>
     </main>

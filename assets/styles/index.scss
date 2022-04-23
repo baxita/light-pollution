@@ -1,5 +1,6 @@
 @import './colors';
 @import './fonts';
+@import './animation';
 
 // Mixins
 @mixin centering($top-value) {
@@ -13,6 +14,7 @@
   &.lightbeam {
     opacity: 0;
     transition: opacity 2s 4s;
+    z-index: 2;
   }
 
   &.lightbeam:nth-of-type(2) {
@@ -31,7 +33,7 @@ main {
   height: 100vh;
   width: 100vw;
   overflow: auto;
-  background-color: $gradient-pollutedsky-base;
+  background-color: var(--gradientBase, $gradient-base);
 }
 
 section {
@@ -43,16 +45,47 @@ section {
   overflow: hidden;
 
   &:nth-of-type(1) {
-    background: $gradient-pollutedsky-s1;
+    background-image: var(--gradient-s1, $gradient-s1);
 
-    //introduction-page polluted arrow indicate scroll
+    & #northern-lights {
+      position: absolute;
+      bottom: 15%;
+      left: 0;
+      width: 100vw;
+      height: 35%;
+
+      & .light {
+        position: absolute;
+        width: 5%;
+        height: 100%;
+        border-radius: 100%;
+        background: rgb(5, 129, 151);
+        filter: blur(70px) drop-shadow(0px 100px 70px rgba(109, 41, 255, 0.66));
+        animation: northern-lights-move 4s infinite alternate,
+          northern-lights-fade 4s infinite alternate 3s;
+
+        &:nth-of-type(odd) {
+          height: 80%;
+          animation: northern-lights-move 7s infinite alternate 3s
+            northern-lights-fade 3s infinite alternate 7s;
+        }
+
+        &:nth-of-type(3n) {
+          height: 50%;
+        }
+
+        &:nth-of-type(4n) {
+          animation: northern-lights-move 5s infinite alternate,
+            northern-lights-fade 2s infinite alternate 2s;
+        }
+      }
+      
     //! TODO: add animation in later issue
     & #arrow_intro {
       @include centering(78%);
       width: 2.5vw;
     }
 
-    //finalpage-dimmed reload-icon
     //! TODO: add animation in later issue
     & #reload_arrow {
       @include centering(88%);
@@ -61,7 +94,7 @@ section {
   }
 
   &:nth-of-type(2) {
-    background: $gradient-pollutedsky-s2;
+    background-image: var(--gradient-s2, $gradient-s2);
 
     & .side--left {
       z-index: 2;
@@ -109,7 +142,7 @@ section {
   }
 
   &:nth-of-type(3) {
-    background: $gradient-pollutedsky-s3;
+    background-image: var(--gradient-s3, $gradient-s3);
 
     & img {
       @include lightbeamFade();
@@ -150,6 +183,26 @@ section {
         bottom: 10vw;
         right: 10%;
       }
+
+      // Dimmed turtle placements
+      &.turtle--dimmed {
+        transform: scaleX(-1) rotate(-35deg);
+
+        &#large-turtle {
+          right: 0;
+        }
+
+        &#medium-turtle {
+          width: 30%;
+          left: 0;
+        }
+
+        &#small-turtle {
+          width: 20%;
+          left: 0;
+          bottom: 20vw;
+        }
+      }
     }
 
     // TODO: switch out moon sizing w/ variable?
@@ -160,9 +213,10 @@ section {
       border-left: 40vh solid transparent;
       border-right: 40vh solid transparent;
       border-bottom: calc(100vh - (4vw + 8vw)) solid #f5f5c9;
-      opacity: 0.1;
+      opacity: 0.1 !important;
       bottom: 0;
       left: calc(50vw - (40vh));
+      z-index: 2;
     }
 
     & .moon {
@@ -173,11 +227,12 @@ section {
       height: 8vw;
       background-color: #f5f5c9;
       border-radius: 100%;
+      z-index: 2;
     }
   }
 
   &:nth-of-type(4) {
-    background: $gradient-pollutedsky-s4;
+    background-image: var(--gradient-s4, $gradient-s4);
 
     & .side--left {
       z-index: 2;
@@ -215,7 +270,7 @@ section {
       }
 
       // TODO: animate star (move into and across screen)
-      &#shootingstar {
+      &#shooting-star {
         left: -100%;
       }
     }
@@ -228,38 +283,48 @@ section {
   box-sizing: border-box;
   display: inline-block;
   position: absolute;
+  z-index: 1;
 
   &--left {
     left: -100%;
     transition: left 4s;
-    // ! TODO: remove - used for testing !!
-    // background-color: rgba(255, 255, 255, 0.24);
   }
 
   &--right {
     right: -100%;
     transition: right 4s;
-    // ! TODO: remove - used for testing !!
-    // background-color: rgba(0, 0, 0, 0.247);
   }
 }
 
 // * Visibility
 .dimmed {
-  display: inline-block;
   display: none;
+
+  &--fade {
+    opacity: 0;
+    transition: opacity 4s 4s;
+  }
 }
 
-// !! TODO: remove - used for testing !!
 .polluted {
-  display: none;
   display: inline-block;
+
+  &--fade {
+    opacity: 1;
+    transition: opacity 4s;
+  }
 }
 
 // * Text
+h1,
+p {
+  user-select: none;
+  z-index: 2;
+}
+
 // Headings
 h1 {
-  @include centering(30%);
+  @include centering(20%);
   font-family: $font-heading;
   font-weight: 400;
   font-size: 36px;
@@ -269,7 +334,7 @@ h1 {
 
 // Quotes
 p {
-  @include centering(50%);
+  @include centering(40%);
   z-index: 1000;
   font-family: $font-quote;
   font-size: 24px;
@@ -294,7 +359,7 @@ p {
   }
 
   &.author {
-    top: 65%;
+    top: 52%;
     text-align: right;
   }
 }
@@ -303,7 +368,7 @@ button {
   @include centering(70%);
   z-index: 999;
   font-family: $font-quote;
-  background: $gradient-pollutedsky-button;
+  background: var(--gradient-button, $gradient-button);
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -327,16 +392,21 @@ button {
   }
 
   &.dimmed {
-    background: $gradient-clearsky-button;
-    top: 80%;
+    top: 70%;
   }
 }
 
 // * Intersection observer classes
+// Fade ins
 .show {
   opacity: 1 !important;
 }
 
+.hide {
+  opacity: 0 !important;
+}
+
+// Split slide-ins
 .slide {
   &-left {
     left: 0;
@@ -344,5 +414,34 @@ button {
 
   &-right {
     right: 0;
+  }
+}
+
+// Stars
+.star {
+  width: 10px;
+  height: 10px;
+  background: rgb(219, 218, 173);
+  background: radial-gradient(
+    circle,
+    rgba(219, 218, 173, 1) 0%,
+    rgba(255, 255, 255, 0) 51%
+  );
+  border-radius: 100%;
+  position: absolute;
+  animation: blinking-star 4s infinite alternate;
+  z-index: 0;
+
+  &:nth-child(even) {
+    background: rgb(173, 219, 195);
+    background: radial-gradient(
+      circle,
+      rgba(173, 219, 195, 1) 0%,
+      rgba(255, 255, 255, 0) 51%
+    );
+  }
+
+  &:nth-child(5n) {
+    animation: bigger-blinking-star 4s infinite alternate;
   }
 }
