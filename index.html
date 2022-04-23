@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/index.css" />
     <title>Light pollution</title>
   </head>
+
   <body>
     <main>
       <!-- Section 1 - Introduction / "Make an impact - turn off your lights"  -->
@@ -19,11 +20,12 @@
           artificial light.
         </p>
         <p class="polluted direction">Scroll down to learn more</p>
-        <!-- <img
+        <img
+          id="arrow_intro"
           class="polluted"
           src="assets/images/section_1/arrow_intro.svg"
-          alt=""
-        /> -->
+          alt="arrow-scroll"
+        />
 
         <!-- Dimmed -->
         <p class="dimmed">
@@ -33,11 +35,12 @@
         </p>
         <p class="dimmed author">- Vincent van Gogh</p>
         <button class="dimmed">Read more</button>
-        <!-- <img
+        <img
+          id="reload_arrow"
           class="dimmed"
           src="assets/images/section_1/reload_arrow.svg"
-          alt=""
-        /> -->
+          alt="reload-icon"
+        />
         <p class="dimmed direction direction-reload">Reload page</p>
 
         <!-- Northern lights -->
@@ -47,22 +50,40 @@
       <!-- Section 2 - Human health -->
       <section>
         <div class="side side--left">
-          <!-- <img src="assets/images/section_2/left-side_room.svg" alt="" /> -->
-          <!-- <img src="assets/images/section_2/bed-human.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_2/light-beam-window.svg"
+          <img
+            id="left-side_room"
+            src="assets/images/section_2/left-side_room.svg"
             alt=""
-          /> -->
+          />
+          <img
+            id="bed-human"
+            src="assets/images/section_2/bed-human.svg"
+            alt=""
+          />
         </div>
+
         <div class="side side--right">
-          <!-- <img src="assets/images/section_2/right-side_room.svg" alt="" /> -->
-          <!-- <img
-            class="polluted"
-            src="assets/images/section_2/light-beam-doorway.svg"
+          <img
+            id="right-side_room"
+            src="assets/images/section_2/right-side_room.svg"
             alt=""
-          /> -->
+          />
         </div>
+
+        <img
+          id="light-beam-window"
+          class="polluted lightbeam"
+          src="assets/images/section_2/light-beam-window.svg"
+          alt=""
+        />
+
+        <img
+          id="light-beam-doorway"
+          class="polluted lightbeam"
+          src="assets/images/section_2/light-beam-doorway.svg"
+          alt=""
+        />
+
         <p class="polluted">
           Artificial light can disturb natural body rhythms in both humans and
           animals. This can result in sleep deprivation, fatigue, headaches,

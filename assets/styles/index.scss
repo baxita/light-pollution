@@ -79,11 +79,66 @@ section {
             northern-lights-fade 2s infinite alternate 2s;
         }
       }
+      
+    //! TODO: add animation in later issue
+    & #arrow_intro {
+      @include centering(78%);
+      width: 2.5vw;
+    }
+
+    //! TODO: add animation in later issue
+    & #reload_arrow {
+      @include centering(88%);
+      width: 2.1vw;
     }
   }
 
   &:nth-of-type(2) {
     background-image: var(--gradient-s2, $gradient-s2);
+
+    & .side--left {
+      z-index: 2;
+    }
+
+    & img {
+      position: absolute;
+
+      &#right-side_room {
+        right: 0;
+        height: 100vh;
+      }
+
+      &#left-side_room {
+        left: 0;
+        height: 100vh;
+      }
+
+      &#bed-human {
+        max-width: 100%;
+        width: 1000px;
+        bottom: 1vw;
+        left: 17%;
+      }
+
+      // TODO: uncomment after merge
+      // &.lightbeam {
+      //   @include lightbeamFade();
+      // }
+
+      &#light-beam-doorway {
+        height: 63vh;
+        bottom: 0;
+        right: 21vh;
+        z-index: 3;
+      }
+
+      &#light-beam-window {
+        height: 89.5vh;
+        right: 54.2vh;
+        bottom: 0;
+        z-index: 4;
+      }
+    }
   }
 
   &:nth-of-type(3) {
