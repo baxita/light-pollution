@@ -36,19 +36,15 @@ section {
 
     //introduction-page polluted arrow indicate scroll
     //! TODO: add animation in later issue
-    & #arrow {
-      position: absolute;
-      top: 78%;
-      left: 48%;
+    & #arrow_intro {
+      @include centering(78%);
       width: 2.5vw;
     }
 
     //finalpage-dimmed reload-icon
     //! TODO: add animation in later issue
-    & #reload {
-      position: absolute;
-      top: 88%;
-      left: 48.6%;
+    & #reload_arrow {
+      @include centering(88%);
       width: 2.1vw;
     }
   }
