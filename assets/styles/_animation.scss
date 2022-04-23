@@ -83,3 +83,17 @@ $length: 50%;
     opacity: 0.2;
   }
 }
+
+@keyframes arrowMove {
+  0% {transform: translateY(0)}
+  100% {transform: translateY(-4vh)}
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
