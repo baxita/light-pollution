@@ -1,7 +1,6 @@
 @import './colors';
 @import './fonts';
 
-
 // Mixins
 @mixin centering($top-value) {
   position: absolute;
@@ -36,7 +35,6 @@ section {
     background: $gradient-pollutedsky-s1;
   }
 
-  // HUMAN HEALTH SECTION 2
   &:nth-of-type(2) {
     background: $gradient-pollutedsky-s2;
 
@@ -44,47 +42,44 @@ section {
       z-index: 2;
     }
 
-    & #right-side_room,
-    #left-side_room {
-      @include room-position();
-    }
-
-    & #right-side_room {
-      right: 0;
-    }
-
-    & #left-side_room {
-      left: 0;
-    }
-
-    & #bed {
+    & img {
       position: absolute;
-      min-width: 50%;
-      max-width: 55%;
-      bottom: 1vw;
-      left: 17%;
-      z-index: 3;
-    }
 
-    & #light-beam-doorway {
-      @include lightbeamFade();
-      position: absolute;
-      max-height: 63vh;
-      min-height: 40vh;
-      bottom: 0;
-      right: 12%;
-      z-index: 3;
-    }
+      &#right-side_room {
+        right: 0;
+        height: 100vh;
+      }
 
-    & #light-beam-window {
-      @include lightbeamFade();
-      position: absolute;
-      min-width: 50vw;
-      height: 89.5vh;
-      // left: 3.5vw
-      right: 30.5vw;
-      bottom: 0;
-      z-index: 4;
+      &#left-side_room {
+        left: 0;
+        height: 100vh;
+      }
+
+      &#bed-human {
+        max-width: 100%;
+        width: 1000px;
+        bottom: 1vw;
+        left: 17%;
+      }
+
+      // TODO: uncomment after merge
+      // &.lightbeam {
+      //   @include lightbeamFade();
+      // }
+
+      &#light-beam-doorway {
+        height: 63vh;
+        bottom: 0;
+        right: 21vh;
+        z-index: 3;
+      }
+
+      &#light-beam-window {
+        height: 89.5vh;
+        right: 54.2vh;
+        bottom: 0;
+        z-index: 4;
+      }
     }
   }
 
