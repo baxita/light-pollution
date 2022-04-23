@@ -28,6 +28,24 @@ section:nth-of-type(1) {
   background: linear-gradient(180deg, #9f7942 0%, #975e4b 100%);
 }
 
+section:nth-of-type(1) #arrow_intro {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 2.5vw;
+}
+
+section:nth-of-type(1) #reload_arrow {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 2.1vw;
+}
+
 section:nth-of-type(2) {
   background: -webkit-gradient(linear, left top, left bottom, from(#975e4b), to(#7b555d));
   background: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
