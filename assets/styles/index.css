@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
-@-webkit-keyframes turtle-move {
+@-webkit-keyframes confused-turtle {
   0% {
     -webkit-transform: translate(0, 0) rotate(15deg);
             transform: translate(0, 0) rotate(15deg);
@@ -26,7 +26,7 @@
     opacity: 0.4;
   }
 }
-@keyframes turtle-move {
+@keyframes confused-turtle {
   0% {
     -webkit-transform: translate(0, 0) rotate(15deg);
             transform: translate(0, 0) rotate(15deg);
@@ -51,6 +51,32 @@
     -webkit-transform: translate(0, 0) rotate(15deg);
             transform: translate(0, 0) rotate(15deg);
     opacity: 0.4;
+  }
+}
+
+@-webkit-keyframes swimming-turtles {
+  from {
+    -webkit-transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+            transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+            transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes swimming-turtles {
+  from {
+    -webkit-transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+            transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+            transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+    opacity: 0.8;
   }
 }
 
@@ -316,8 +342,8 @@ section:nth-of-type(3) img#large-turtle {
   max-width: 350px;
   bottom: 10%;
   right: 10%;
-  -webkit-animation: turtle-move 6s infinite ease-in-out;
-          animation: turtle-move 6s infinite ease-in-out;
+  -webkit-animation: confused-turtle 6s infinite ease-in-out;
+          animation: confused-turtle 6s infinite ease-in-out;
 }
 
 section:nth-of-type(3) img#medium-turtle {
@@ -335,6 +361,8 @@ section:nth-of-type(3) img#small-turtle {
 section:nth-of-type(3) img.turtle--dimmed {
   -webkit-transform: scaleX(-1) rotate(-35deg);
           transform: scaleX(-1) rotate(-35deg);
+  -webkit-animation: swimming-turtles 6s infinite alternate !important;
+          animation: swimming-turtles 6s infinite alternate !important;
 }
 
 section:nth-of-type(3) img.turtle--dimmed#large-turtle {

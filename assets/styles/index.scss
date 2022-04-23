@@ -121,7 +121,6 @@ section {
         left: 17%;
       }
 
-      // TODO: uncomment after merge
       &.lightbeam {
         @include lightbeamFade();
       }
@@ -171,7 +170,7 @@ section {
         max-width: 350px;
         bottom: 10%;
         right: 10%;
-        animation: turtle-move 6s infinite ease-in-out;
+        animation: confused-turtle 6s infinite ease-in-out;
       }
 
       &#medium-turtle {
@@ -190,6 +189,7 @@ section {
         // Dimmed turtle placements
         &--dimmed {
           transform: scaleX(-1) rotate(-35deg);
+          animation: swimming-turtles 6s infinite alternate !important;
 
           &#large-turtle {
             right: 0;

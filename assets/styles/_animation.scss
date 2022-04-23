@@ -2,7 +2,8 @@
 
 // Turtles
 $length: 50%;
-@keyframes turtle-move {
+
+@keyframes confused-turtle {
   0% {
     transform: translate(0, 0) rotate(15deg);
     opacity: 0.4;
@@ -26,6 +27,18 @@ $length: 50%;
   100% {
     transform: translate(0, 0) rotate(15deg);
     opacity: 0.4;
+  }
+}
+
+@keyframes swimming-turtles {
+  from {
+    transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+    opacity: 0.8;
   }
 }
 
