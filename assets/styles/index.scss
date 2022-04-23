@@ -79,7 +79,8 @@ section {
             northern-lights-fade 2s infinite alternate 2s;
         }
       }
-      
+    }
+
     //! TODO: add animation in later issue
     & #arrow_intro {
       @include centering(78%);
@@ -121,9 +122,9 @@ section {
       }
 
       // TODO: uncomment after merge
-      // &.lightbeam {
-      //   @include lightbeamFade();
-      // }
+      &.lightbeam {
+        @include lightbeamFade();
+      }
 
       &#light-beam-doorway {
         height: 63vh;

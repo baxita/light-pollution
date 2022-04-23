@@ -192,6 +192,18 @@ section:nth-of-type(2) img#bed-human {
   left: 17%;
 }
 
+section:nth-of-type(2) img.lightbeam.lightbeam {
+  opacity: 0;
+  -webkit-transition: opacity 2s 4s;
+  transition: opacity 2s 4s;
+  z-index: 2;
+}
+
+section:nth-of-type(2) img.lightbeam.lightbeam:nth-of-type(2) {
+  -webkit-transition: opacity 2s 5s;
+  transition: opacity 2s 5s;
+}
+
 section:nth-of-type(2) img#light-beam-doorway {
   height: 63vh;
   bottom: 0;
