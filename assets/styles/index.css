@@ -1,4 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
+@-webkit-keyframes confused-turtle {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(15deg);
+            transform: translate(0, 0) rotate(15deg);
+    opacity: 0.4;
+  }
+  25% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: translate(-50%, 50%) rotate(-10deg);
+            transform: translate(-50%, 50%) rotate(-10deg);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(-50%, 0) rotate(10deg);
+            transform: translate(-50%, 0) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(15deg);
+            transform: translate(0, 0) rotate(15deg);
+    opacity: 0.4;
+  }
+}
+@keyframes confused-turtle {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(15deg);
+            transform: translate(0, 0) rotate(15deg);
+    opacity: 0.4;
+  }
+  25% {
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+    opacity: 0.2;
+  }
+  50% {
+    -webkit-transform: translate(-50%, 50%) rotate(-10deg);
+            transform: translate(-50%, 50%) rotate(-10deg);
+    opacity: 0.8;
+  }
+  75% {
+    -webkit-transform: translate(-50%, 0) rotate(10deg);
+            transform: translate(-50%, 0) rotate(10deg);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(15deg);
+            transform: translate(0, 0) rotate(15deg);
+    opacity: 0.4;
+  }
+}
+
+@-webkit-keyframes swimming-turtles {
+  from {
+    -webkit-transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+            transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+            transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes swimming-turtles {
+  from {
+    -webkit-transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+            transform: translateY(0%) scale(1, 1) scaleX(-1) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+            transform: translateY(-50%) scale(0.8, 0.8) scaleX(-1) rotate(-45deg);
+    opacity: 0.8;
+  }
+}
+
 @-webkit-keyframes blinking-star {
   from {
     -webkit-transform: scale(0.00001);
@@ -9,6 +90,7 @@
             transform: scale(1);
   }
 }
+
 @keyframes blinking-star {
   from {
     -webkit-transform: scale(0.00001);
@@ -260,6 +342,8 @@ section:nth-of-type(3) img#large-turtle {
   max-width: 350px;
   bottom: 10%;
   right: 10%;
+  -webkit-animation: confused-turtle 6s infinite ease-in-out;
+          animation: confused-turtle 6s infinite ease-in-out;
 }
 
 section:nth-of-type(3) img#medium-turtle {
@@ -277,10 +361,14 @@ section:nth-of-type(3) img#small-turtle {
 section:nth-of-type(3) img.turtle--dimmed {
   -webkit-transform: scaleX(-1) rotate(-35deg);
           transform: scaleX(-1) rotate(-35deg);
+  -webkit-animation: swimming-turtles 6s infinite alternate !important;
+          animation: swimming-turtles 6s infinite alternate !important;
 }
 
 section:nth-of-type(3) img.turtle--dimmed#large-turtle {
   right: 0;
+  -webkit-animation: none;
+          animation: none;
 }
 
 section:nth-of-type(3) img.turtle--dimmed#medium-turtle {

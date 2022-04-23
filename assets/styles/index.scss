@@ -121,7 +121,6 @@ section {
         left: 17%;
       }
 
-      // TODO: uncomment after merge
       &.lightbeam {
         @include lightbeamFade();
       }
@@ -171,6 +170,7 @@ section {
         max-width: 350px;
         bottom: 10%;
         right: 10%;
+        animation: confused-turtle 6s infinite ease-in-out;
       }
 
       &#medium-turtle {
@@ -185,23 +185,27 @@ section {
         right: 10%;
       }
 
-      // Dimmed turtle placements
-      &.turtle--dimmed {
-        transform: scaleX(-1) rotate(-35deg);
+      &.turtle {
+        // Dimmed turtle placements
+        &--dimmed {
+          transform: scaleX(-1) rotate(-35deg);
+          animation: swimming-turtles 6s infinite alternate !important;
 
-        &#large-turtle {
-          right: 0;
-        }
+          &#large-turtle {
+            right: 0;
+            animation: none;
+          }
 
-        &#medium-turtle {
-          width: 30%;
-          left: 0;
-        }
+          &#medium-turtle {
+            width: 30%;
+            left: 0;
+          }
 
-        &#small-turtle {
-          width: 20%;
-          left: 0;
-          bottom: 20vw;
+          &#small-turtle {
+            width: 20%;
+            left: 0;
+            bottom: 20vw;
+          }
         }
       }
     }
