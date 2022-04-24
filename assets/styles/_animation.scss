@@ -1,5 +1,24 @@
 // * Animations
 
+// Arrows
+@keyframes arrowMove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4vh);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 // Turtles
 $length: 50%;
 
