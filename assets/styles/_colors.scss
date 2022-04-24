@@ -1,5 +1,11 @@
 // Polluted sky gradients
 $gradient-base: #9e7543;
+$gradient-full: linear-gradient(
+  180deg,
+  #9f7942 0%,
+  #945050 41.15%,
+  #456079 95.83%
+);
 $gradient-s1: linear-gradient(180deg, #9f7942 0%, #975e4b 100%);
 $gradient-s2: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
 $gradient-s3: linear-gradient(180deg, #7a555d 0%, #466078 100%);
