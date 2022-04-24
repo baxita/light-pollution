@@ -147,3 +147,9 @@ const loadLights = () => {
     document.getElementById('northern-lights').append(light)
   }
 }
+
+// * Button - Reload page
+const reloadButton = document.getElementById('reload-button')
+reloadButton.addEventListener('click', () => {
+  location.reload()
+})

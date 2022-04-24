@@ -143,6 +143,10 @@ section {
       animation: spin 5000ms infinite linear;
       animation-delay: 15s;
     }
+
+    & #reload-button:hover {
+      cursor: pointer;
+    }
   }
 
   &:nth-of-type(2) {
@@ -514,21 +518,21 @@ button {
 
 // * MEDIA QUERIES
 
-@media (prefers-reduced-motion) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+// @media (prefers-reduced-motion) {
+//   * {
+//     animation: none !important;
+//     transition: none !important;
+//   }
 
-  section:nth-of-type(3) img.turtle--dimmed {
-    animation: none !important;
-  }
-}
+//   section:nth-of-type(3) img.turtle--dimmed {
+//     animation: none !important;
+//   }
+// }
 
-@media (max-width: 1200px) {
-  @include screenError();
-}
+// @media (max-width: 1200px) {
+//   @include screenError();
+// }
 
-@media (orientation: portrait) {
-  @include screenError();
-}
+// @media (orientation: portrait) {
+//   @include screenError();
+// }
