@@ -385,6 +385,13 @@ button {
   border-radius: 15px;
   opacity: 0;
   transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s;
+  animation: shake 10s ease-in-out infinite both 20s;
+
+  &:hover,
+  &:active,
+  &.dimmed {
+    animation: none;
+  }
 
   &:hover {
     cursor: pointer;
