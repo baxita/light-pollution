@@ -871,6 +871,18 @@ button.dimmed {
           animation: bigger-blinking-star 4s infinite alternate;
 }
 
+main::-webkit-scrollbar-track {
+  display: none;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 @media (prefers-reduced-motion) {
   * {
     -webkit-animation: none !important;

@@ -529,8 +529,20 @@ button {
   }
 }
 
-// * MEDIA QUERIES
+// Scrollbar
+main::-webkit-scrollbar-track {
+  display: none;
+}
 
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+// * MEDIA QUERIES
 @media (prefers-reduced-motion) {
   * {
     animation: none !important;
