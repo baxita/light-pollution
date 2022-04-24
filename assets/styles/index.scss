@@ -140,8 +140,10 @@ section {
     & #reload_arrow {
       @include centering(88%);
       width: 2.1vw;
-      animation: spin 5000ms infinite linear;
+      animation: spin 10s infinite linear;
       animation-delay: 15s;
+      filter: none !important;
+      z-index: 2;
     }
 
     & #reload-button:hover {
