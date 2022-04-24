@@ -132,7 +132,7 @@ section {
     }
 
     & #arrow_intro {
-      @include centering(78%);
+      @include centering(83%);
       width: 2.5vw;
       animation: arrowMove 2s infinite alternate;
     }

@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
 @-webkit-keyframes arrowMove {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translateY(-4vh);
-            transform: translateY(-4vh);
+    -webkit-transform: translate(-50%, calc(-50% - 4vh));
+            transform: translate(-50%, calc(-50% - 4vh));
   }
 }
 @keyframes arrowMove {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translateY(-4vh);
-            transform: translateY(-4vh);
+    -webkit-transform: translate(-50%, calc(-50% - 4vh));
+            transform: translate(-50%, calc(-50% - 4vh));
   }
 }
 
@@ -387,14 +387,14 @@ section:nth-of-type(1) #northern-lights .light {
   background: #058197;
   -webkit-filter: blur(70px) drop-shadow(0px 100px 70px rgba(109, 41, 255, 0.66));
           filter: blur(70px) drop-shadow(0px 100px 70px rgba(109, 41, 255, 0.66));
-  -webkit-animation: northern-lights-move 4s infinite alternate, northern-lights-fade 4s infinite alternate 3s;
-          animation: northern-lights-move 4s infinite alternate, northern-lights-fade 4s infinite alternate 3s;
+  -webkit-animation: northern-lights-move 4s infinite alternate, northern-lights-fade 4s infinite alternate 3s;
+          animation: northern-lights-move 4s infinite alternate, northern-lights-fade 4s infinite alternate 3s;
 }
 
 section:nth-of-type(1) #northern-lights .light:nth-of-type(odd) {
   height: 80%;
-  -webkit-animation: northern-lights-move 7s infinite alternate 3s northern-lights-fade 3s infinite alternate 7s;
-          animation: northern-lights-move 7s infinite alternate 3s northern-lights-fade 3s infinite alternate 7s;
+  -webkit-animation: northern-lights-move 7s infinite alternate 3s northern-lights-fade 3s infinite alternate 7s;
+          animation: northern-lights-move 7s infinite alternate 3s northern-lights-fade 3s infinite alternate 7s;
 }
 
 section:nth-of-type(1) #northern-lights .light:nth-of-type(3n) {
@@ -402,13 +402,13 @@ section:nth-of-type(1) #northern-lights .light:nth-of-type(3n) {
 }
 
 section:nth-of-type(1) #northern-lights .light:nth-of-type(4n) {
-  -webkit-animation: northern-lights-move 5s infinite alternate, northern-lights-fade 2s infinite alternate 2s;
-          animation: northern-lights-move 5s infinite alternate, northern-lights-fade 2s infinite alternate 2s;
+  -webkit-animation: northern-lights-move 5s infinite alternate, northern-lights-fade 2s infinite alternate 2s;
+          animation: northern-lights-move 5s infinite alternate, northern-lights-fade 2s infinite alternate 2s;
 }
 
 section:nth-of-type(1) #arrow_intro {
   position: absolute;
-  top: 78%;
+  top: 83%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
