@@ -10,6 +10,15 @@
   }
 }
 
+@keyframes arrowMoveRotated {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, calc(-50% - 4vh)) rotate(180deg);
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

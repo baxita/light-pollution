@@ -265,7 +265,6 @@ section {
       }
     }
 
-    // TODO: switch out moon sizing w/ variable?
     & #flare-moonbeam {
       position: absolute;
       width: 0;
@@ -336,6 +335,18 @@ section {
         filter: none !important;
         animation: shooting-star 5s infinite ease-in;
       }
+
+      &#arrow-up {
+        @include centering(80%);
+        width: 25px;
+        animation: arrowMoveRotated 2s infinite alternate;
+        filter: none !important;
+        z-index: 2;
+      }
+    }
+
+    & #direction--scroll-up {
+      opacity: 0;
     }
   }
 }

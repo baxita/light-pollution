@@ -95,7 +95,6 @@ lightswitch.addEventListener('click', (e) => {
     'linear-gradient(98.02deg, #227696 29.92%, #3b6691 53.43%,  #6d4586 96.31%)'
   )
 
-  // TODO: choose a different selector and only select the specific images that should be dimmed?
   // Dim images
   const images = document.querySelectorAll('img')
   images.forEach((img) => {
