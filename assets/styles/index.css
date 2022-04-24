@@ -527,12 +527,12 @@ section:nth-of-type(3) img#lightbeam-close {
 }
 
 section:nth-of-type(3) img#large-turtle {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
   width: 50%;
   max-width: 350px;
   bottom: 10%;
   right: 10%;
-  -webkit-animation: confused-turtle 6s infinite ease-in-out;
-          animation: confused-turtle 6s infinite ease-in-out;
 }
 
 section:nth-of-type(3) img#medium-turtle {
