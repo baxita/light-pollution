@@ -9,6 +9,7 @@ const sectionObserver = new IntersectionObserver(
       const rightSide = entry.target.querySelector('.side--right')
       const button = entry.target.querySelector('button')
       const lightbeams = entry.target.querySelectorAll('.lightbeam')
+      const largeTurtle = entry.target.querySelector('#large-turtle')
 
       if (!entry.isIntersecting) {
         quotes.forEach((quote) => {
@@ -34,6 +35,13 @@ const sectionObserver = new IntersectionObserver(
           lightbeam.classList.add('show')
         })
       }
+
+      if (largeTurtle) {
+        setTimeout(() => {
+          largeTurtle.style.animation =
+            'confused-turtle 6s infinite ease-in-out'
+        }, 4000)
+      }
     })
   },
   {
@@ -46,7 +54,7 @@ sections.forEach((section) => {
   sectionObserver.observe(section)
 })
 
-// * Button - dim the lights
+// * Button - Dim the lights
 const lightswitch = document.getElementById('lightswitch')
 
 lightswitch.addEventListener('click', (e) => {
@@ -95,7 +103,6 @@ lightswitch.addEventListener('click', (e) => {
     'linear-gradient(98.02deg, #227696 29.92%, #3b6691 53.43%,  #6d4586 96.31%)'
   )
 
-  // TODO: choose a different selector and only select the specific images that should be dimmed?
   // Dim images
   const images = document.querySelectorAll('img')
   images.forEach((img) => {
@@ -147,3 +154,9 @@ const loadLights = () => {
     document.getElementById('northern-lights').append(light)
   }
 }
+
+// * Button - Reload page
+const reloadButton = document.getElementById('reload-button')
+reloadButton.addEventListener('click', () => {
+  location.reload()
+})

@@ -1,44 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
 @-webkit-keyframes arrowMove {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translateY(-4vh);
-            transform: translateY(-4vh);
+    -webkit-transform: translate(-50%, calc(-50% - 4vh));
+            transform: translate(-50%, calc(-50% - 4vh));
   }
 }
 @keyframes arrowMove {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   100% {
-    -webkit-transform: translateY(-4vh);
-            transform: translateY(-4vh);
+    -webkit-transform: translate(-50%, calc(-50% - 4vh));
+            transform: translate(-50%, calc(-50% - 4vh));
+  }
+}
+
+@-webkit-keyframes arrowMoveRotated {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, calc(-50% - 4vh)) rotate(180deg);
+            transform: translate(-50%, calc(-50% - 4vh)) rotate(180deg);
+  }
+}
+
+@keyframes arrowMoveRotated {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, calc(-50% - 4vh)) rotate(180deg);
+            transform: translate(-50%, calc(-50% - 4vh)) rotate(180deg);
   }
 }
 
 @-webkit-keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+  0%,
+  40%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(0turn);
+            transform: translate(-50%, -50%) rotate(0turn);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  50%,
+  90% {
+    -webkit-transform: translate(-50%, -50%) rotate(1turn);
+            transform: translate(-50%, -50%) rotate(1turn);
   }
 }
 
 @keyframes spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+  0%,
+  40%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(0turn);
+            transform: translate(-50%, -50%) rotate(0turn);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  50%,
+  90% {
+    -webkit-transform: translate(-50%, -50%) rotate(1turn);
+            transform: translate(-50%, -50%) rotate(1turn);
   }
 }
 
@@ -386,7 +414,7 @@ section:nth-of-type(1) #northern-lights .light:nth-of-type(4n) {
 
 section:nth-of-type(1) #arrow_intro {
   position: absolute;
-  top: 78%;
+  top: 83%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -402,10 +430,17 @@ section:nth-of-type(1) #reload_arrow {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 2.1vw;
-  -webkit-animation: spin 5000ms infinite linear;
-          animation: spin 5000ms infinite linear;
+  -webkit-animation: spin 10s infinite linear;
+          animation: spin 10s infinite linear;
   -webkit-animation-delay: 15s;
           animation-delay: 15s;
+  -webkit-filter: none !important;
+          filter: none !important;
+  z-index: 2;
+}
+
+section:nth-of-type(1) #reload-button:hover {
+  cursor: pointer;
 }
 
 section:nth-of-type(2) {
@@ -501,12 +536,12 @@ section:nth-of-type(3) img#lightbeam-close {
 }
 
 section:nth-of-type(3) img#large-turtle {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
   width: 50%;
   max-width: 350px;
   bottom: 10%;
   right: 10%;
-  -webkit-animation: confused-turtle 6s infinite ease-in-out;
-          animation: confused-turtle 6s infinite ease-in-out;
 }
 
 section:nth-of-type(3) img#medium-turtle {
@@ -628,6 +663,24 @@ section:nth-of-type(4) img#shooting-star {
           filter: none !important;
   -webkit-animation: shooting-star 5s infinite ease-in;
           animation: shooting-star 5s infinite ease-in;
+}
+
+section:nth-of-type(4) img#arrow-up {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 25px;
+  -webkit-animation: arrowMoveRotated 2s infinite alternate;
+          animation: arrowMoveRotated 2s infinite alternate;
+  -webkit-filter: none !important;
+          filter: none !important;
+  z-index: 2;
+}
+
+section:nth-of-type(4) #direction--scroll-up {
+  opacity: 0;
 }
 
 .side {

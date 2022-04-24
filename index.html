@@ -18,7 +18,9 @@
         Please switch to a device with a bigger screen or make your browser
         window wider for a better visual experience!
       </p>
-      <button>Read more</button>
+      <a href="https://www.darksky.org/" target="_blank">
+        <button>Read more</button>
+      </a>
     </div>
 
     <main>
@@ -45,14 +47,23 @@
           black dots representing towns and villages on a map”
         </p>
         <p class="dimmed author">- Vincent van Gogh</p>
-        <button class="dimmed">Read more</button>
-        <img
-          id="reload_arrow"
-          class="dimmed"
-          src="assets/images/section_1/reload_arrow.svg"
-          alt="reload-icon"
-        />
-        <p class="dimmed direction direction-reload">Reload page</p>
+        <a href="https://www.darksky.org/" target="_blank">
+          <button class="dimmed">Read more</button>
+        </a>
+        <span
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          id="reload-button"
+        >
+          <img
+            id="reload_arrow"
+            class="dimmed"
+            src="assets/images/section_1/reload_arrow.svg"
+            alt="reload-icon"
+          />
+          <p class="dimmed direction direction-reload">Reload page</p>
+        </span>
 
         <!-- Northern lights -->
         <div id="northern-lights" class="dimmed"></div>
@@ -226,6 +237,15 @@
           src="assets/images/section_4/shooting-star.svg"
           alt=""
           id="shooting-star"
+        />
+        <p id="direction--scroll-up" class="dimmed dimmed--fade direction">
+          Scroll back up
+        </p>
+        <img
+          id="arrow-up"
+          class="dimmed dimmed--fade"
+          src="assets/images/section_1/arrow_intro.svg"
+          alt=""
         />
       </section>
     </main>

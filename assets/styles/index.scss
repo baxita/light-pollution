@@ -132,7 +132,7 @@ section {
     }
 
     & #arrow_intro {
-      @include centering(78%);
+      @include centering(83%);
       width: 2.5vw;
       animation: arrowMove 2s infinite alternate;
     }
@@ -140,8 +140,14 @@ section {
     & #reload_arrow {
       @include centering(88%);
       width: 2.1vw;
-      animation: spin 5000ms infinite linear;
+      animation: spin 10s infinite linear;
       animation-delay: 15s;
+      filter: none !important;
+      z-index: 2;
+    }
+
+    & #reload-button:hover {
+      cursor: pointer;
     }
   }
 
@@ -217,11 +223,11 @@ section {
       }
 
       &#large-turtle {
+        transform: rotate(15deg);
         width: 50%;
         max-width: 350px;
         bottom: 10%;
         right: 10%;
-        animation: confused-turtle 6s infinite ease-in-out;
       }
 
       &#medium-turtle {
@@ -261,7 +267,6 @@ section {
       }
     }
 
-    // TODO: switch out moon sizing w/ variable?
     & #flare-moonbeam {
       position: absolute;
       width: 0;
@@ -332,6 +337,18 @@ section {
         filter: none !important;
         animation: shooting-star 5s infinite ease-in;
       }
+
+      &#arrow-up {
+        @include centering(80%);
+        width: 25px;
+        animation: arrowMoveRotated 2s infinite alternate;
+        filter: none !important;
+        z-index: 2;
+      }
+    }
+
+    & #direction--scroll-up {
+      opacity: 0;
     }
   }
 }
