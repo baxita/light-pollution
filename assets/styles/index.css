@@ -312,8 +312,17 @@
   }
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+#screen-error {
+  display: none;
 }
 
 main {
@@ -819,6 +828,100 @@ button.dimmed {
   section:nth-of-type(3) img.turtle--dimmed {
     -webkit-animation: none !important;
             animation: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  main {
+    display: none !important;
+  }
+  #screen-error {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    padding-top: 20%;
+    margin-bottom: -20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9f7942), color-stop(41.15%, #945050), color-stop(95.83%, #456079));
+    background: linear-gradient(180deg, #9f7942 0%, #945050 41.15%, #456079 95.83%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  #screen-error h1,
+  #screen-error p,
+  #screen-error button {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  #screen-error h1 {
+    max-width: 90%;
+  }
+  #screen-error p {
+    opacity: 1;
+    max-width: 80%;
+  }
+  #screen-error button {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#975e4b), to(#7b555d));
+    background: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
+  }
+}
+
+@media (orientation: portrait) {
+  main {
+    display: none !important;
+  }
+  #screen-error {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    padding-top: 20%;
+    margin-bottom: -20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9f7942), color-stop(41.15%, #945050), color-stop(95.83%, #456079));
+    background: linear-gradient(180deg, #9f7942 0%, #945050 41.15%, #456079 95.83%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  #screen-error h1,
+  #screen-error p,
+  #screen-error button {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  #screen-error h1 {
+    max-width: 90%;
+  }
+  #screen-error p {
+    opacity: 1;
+    max-width: 80%;
+  }
+  #screen-error button {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#975e4b), to(#7b555d));
+    background: linear-gradient(180deg, #975e4b 0%, #7b555d 100%);
   }
 }
 /*# sourceMappingURL=index.css.map */
