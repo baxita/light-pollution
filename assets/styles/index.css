@@ -808,4 +808,17 @@ button.dimmed {
   -webkit-animation: bigger-blinking-star 4s infinite alternate;
           animation: bigger-blinking-star 4s infinite alternate;
 }
+
+@media (prefers-reduced-motion) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+  section:nth-of-type(3) img.turtle--dimmed {
+    -webkit-animation: none !important;
+            animation: none !important;
+  }
+}
 /*# sourceMappingURL=index.css.map */
