@@ -1,4 +1,105 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Red+Hat+Text:wght@400;700&display=swap");
+@-webkit-keyframes arrowMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-4vh);
+            transform: translateY(-4vh);
+  }
+}
+@keyframes arrowMove {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-4vh);
+            transform: translateY(-4vh);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  10% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  1%,
+  3%,
+  5%,
+  7% {
+    -webkit-transform: translate(calc(-50% - 6px), -50%);
+            transform: translate(calc(-50% - 6px), -50%);
+  }
+  2%,
+  4%,
+  6% {
+    -webkit-transform: translate(calc(-50% + 6px), -50%);
+            transform: translate(calc(-50% + 6px), -50%);
+  }
+  8% {
+    -webkit-transform: translate(calc(-50% + 4px), -50%);
+            transform: translate(calc(-50% + 4px), -50%);
+  }
+  9% {
+    -webkit-transform: translate(calc(-50% - 4px), -50%);
+            transform: translate(calc(-50% - 4px), -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  10% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  1%,
+  3%,
+  5%,
+  7% {
+    -webkit-transform: translate(calc(-50% - 6px), -50%);
+            transform: translate(calc(-50% - 6px), -50%);
+  }
+  2%,
+  4%,
+  6% {
+    -webkit-transform: translate(calc(-50% + 6px), -50%);
+            transform: translate(calc(-50% + 6px), -50%);
+  }
+  8% {
+    -webkit-transform: translate(calc(-50% + 4px), -50%);
+            transform: translate(calc(-50% + 4px), -50%);
+  }
+  9% {
+    -webkit-transform: translate(calc(-50% - 4px), -50%);
+            transform: translate(calc(-50% - 4px), -50%);
+  }
+}
+
 @-webkit-keyframes confused-turtle {
   0% {
     -webkit-transform: translate(0, 0) rotate(15deg);
@@ -26,6 +127,7 @@
     opacity: 0.4;
   }
 }
+
 @keyframes confused-turtle {
   0% {
     -webkit-transform: translate(0, 0) rotate(15deg);
@@ -121,6 +223,52 @@
   to {
     -webkit-transform: scale(2);
             transform: scale(2);
+  }
+}
+
+@-webkit-keyframes shooting-star {
+  0%,
+  50%,
+  100% {
+    right: 100%;
+    bottom: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    right: -100%;
+    bottom: 10%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  99%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes shooting-star {
+  0%,
+  50%,
+  100% {
+    right: 100%;
+    bottom: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    right: -100%;
+    bottom: 10%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  99%,
+  100% {
+    visibility: hidden;
   }
 }
 
@@ -234,6 +382,8 @@ section:nth-of-type(1) #arrow_intro {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 2.5vw;
+  -webkit-animation: arrowMove 2s infinite alternate;
+          animation: arrowMove 2s infinite alternate;
 }
 
 section:nth-of-type(1) #reload_arrow {
@@ -243,6 +393,10 @@ section:nth-of-type(1) #reload_arrow {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 2.1vw;
+  -webkit-animation: spin 5000ms infinite linear;
+          animation: spin 5000ms infinite linear;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
 }
 
 section:nth-of-type(2) {
@@ -458,7 +612,13 @@ section:nth-of-type(4) img#light-beam-right {
 }
 
 section:nth-of-type(4) img#shooting-star {
-  left: -100%;
+  width: 40vw;
+  right: 100%;
+  bottom: 80%;
+  -webkit-filter: none !important;
+          filter: none !important;
+  -webkit-animation: shooting-star 5s infinite ease-in;
+          animation: shooting-star 5s infinite ease-in;
 }
 
 .side {
@@ -583,6 +743,13 @@ button {
   transition: opacity 2s 7s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
   transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s;
   transition: box-shadow 0.2s, transform 0.2s, opacity 2s 7s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  -webkit-animation: shake 10s ease-in-out infinite both 20s;
+          animation: shake 10s ease-in-out infinite both 20s;
+}
+
+button:hover, button:active, button.dimmed {
+  -webkit-animation: none;
+          animation: none;
 }
 
 button:hover {
