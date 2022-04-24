@@ -275,9 +275,12 @@ section {
         right: 0;
       }
 
-      // TODO: animate star (move into and across screen)
       &#shooting-star {
-        left: -100%;
+        width: 40vw;
+        right: 100%;
+        bottom: 80%;
+        filter: none !important;
+        animation: shooting-star 5s infinite ease-in;
       }
     }
   }

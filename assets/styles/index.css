@@ -226,6 +226,52 @@
   }
 }
 
+@-webkit-keyframes shooting-star {
+  0%,
+  50%,
+  100% {
+    right: 100%;
+    bottom: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    right: -100%;
+    bottom: 10%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  99%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes shooting-star {
+  0%,
+  50%,
+  100% {
+    right: 100%;
+    bottom: 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  98% {
+    right: -100%;
+    bottom: 10%;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 0;
+  }
+  99%,
+  100% {
+    visibility: hidden;
+  }
+}
+
 @-webkit-keyframes northern-lights-move {
   from {
     -webkit-transform: translateY(0) translateX(0);
@@ -566,7 +612,13 @@ section:nth-of-type(4) img#light-beam-right {
 }
 
 section:nth-of-type(4) img#shooting-star {
-  left: -100%;
+  width: 40vw;
+  right: 100%;
+  bottom: 80%;
+  -webkit-filter: none !important;
+          filter: none !important;
+  -webkit-animation: shooting-star 5s infinite ease-in;
+          animation: shooting-star 5s infinite ease-in;
 }
 
 .side {
