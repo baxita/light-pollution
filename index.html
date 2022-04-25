@@ -1,14 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/styles/index.css" />
-		<title>Light pollution</title>
-	</head>
-	<body>
-		<div id="kjersti_square"></div>
-		<div id="ida-square"></div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <title>Light pollution</title>
+  </head>
+
+  <body>
+    <!-- Error for smaller screens -->
+    <div id="screen-error">
+      <h1>Light pollution</h1>
+      <p>
+        This scrollytelling is best experienced with a bigger screen-size.
+        Please switch to a device with a bigger screen or make your browser
+        window wider for a better visual experience!
+      </p>
+      <a href="https://www.darksky.org/" target="_blank">
+        <button>Read more</button>
+      </a>
+    </div>
+
+    <main>
+      <!-- Section 1 - Introduction / "Make an impact - turn off your lights"  -->
+      <section>
+        <h1 class="polluted">Light pollution</h1>
+        <h1 class="dimmed">Make an impact - turn off your lights!</h1>
+        <p class="polluted">
+          Light pollution is the excessive or inappropriate use of outdoor
+          artificial light.
+        </p>
+        <p class="polluted direction">Scroll down to learn more</p>
+        <img
+          id="arrow_intro"
+          class="polluted"
+          src="assets/images/section_1/arrow_intro.svg"
+          alt="Scroll down"
+        />
+
+        <!-- Dimmed -->
+        <p class="dimmed">
+          “For my part I know nothing with any certainty, but the sight of the
+          stars makes me dream, in the same simple way as I dream about the
+          black dots representing towns and villages on a map”
+        </p>
+        <p class="dimmed author">- Vincent van Gogh</p>
+        <a href="https://www.darksky.org/" target="_blank">
+          <button class="dimmed">Read more</button>
+        </a>
+        <span
+          role="button"
+          tabindex="0"
+          aria-pressed="false"
+          id="reload-button"
+        >
+          <img
+            id="reload_arrow"
+            class="dimmed"
+            src="assets/images/section_1/reload_arrow.svg"
+            alt="Reload page"
+          />
+          <p class="dimmed direction direction-reload">Reload page</p>
+        </span>
+
+        <!-- Northern lights -->
+        <div id="northern-lights" class="dimmed"></div>
+      </section>
+
+      <!-- Section 2 - Human health -->
+      <section>
+        <div class="side side--left">
+          <img
+            id="left-side_room"
+            src="assets/images/section_2/left-side_room.svg"
+            alt="Left side of bedroom"
+          />
+          <img
+            id="bed-human"
+            src="assets/images/section_2/bed-human.svg"
+            alt="Bed with sleeping human"
+          />
+        </div>
+
+        <div class="side side--right">
+          <img
+            id="right-side_room"
+            src="assets/images/section_2/right-side_room.svg"
+            alt="Right side of bedroom"
+          />
+        </div>
+
+        <img
+          id="light-beam-window"
+          class="polluted lightbeam"
+          src="assets/images/section_2/light-beam-window.svg"
+          alt="Polluted light coming through window"
+        />
+
+        <img
+          id="light-beam-doorway"
+          class="polluted lightbeam"
+          src="assets/images/section_2/light-beam-doorway.svg"
+          alt="Doorway light is turned on"
+        />
+
+        <p class="polluted">
+          Artificial light can disturb natural body rhythms in both humans and
+          animals. This can result in sleep deprivation, fatigue, headaches,
+          stress, anxiety, and other health problems.
+        </p>
+
+        <!-- Dimmed -->
+        <p class="dimmed">
+          When we don’t get affected by artificial light, our bodies produce
+          more of the hormone melatonin that causes us to sleep better and
+          increases our overall health.
+        </p>
+      </section>
+
+      <!-- Section 3 - Animal disorientation -->
+      <section>
+        <div class="side side--left">
+          <img
+            src="assets/images/section_3/left-side_ocean.svg"
+            alt="Ocean view with distant lighthouse"
+            class="bg-img"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
+            alt="Sea turtle swimming in ocean"
+            id="large-turtle"
+            class="turtle"
+          />
+        </div>
+        <div class="side side--right">
+          <img
+            src="assets/images/section_3/right-side_ocean.svg"
+            alt="Ocean and beach with lighthouse"
+            class="bg-img"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
+            alt="Sea turtle hatchling"
+            id="small-turtle"
+            class="turtle"
+          />
+          <img
+            src="assets/images/section_3/sea-turtle.svg"
+            alt="Sea turtle hatchling"
+            id="medium-turtle"
+            class="turtle"
+          />
+        </div>
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_3/lightbeam-far.svg"
+          alt="Distant lightbeam from lighthouse"
+          id="lightbeam-far"
+        />
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_3/lightbeam-close.svg"
+          alt="Lightbeam from lighthouse"
+          id="lightbeam-close"
+        />
+        <p class="polluted">
+          Light pollution can disorient animals and cause problems when they try
+          to navigate in the wild. Many species use the horizon and stars for
+          orientation.
+        </p>
+
+        <!-- Dimmed -->
+        <p class="dimmed">
+          With only the help of natural light, like the moon, turtles and their
+          hatchlings have a better chance of surviving and finding the way back
+          to the ocean and their group.
+        </p>
+        <div class="moon dimmed"></div>
+        <div id="flare-moonbeam" class="dimmed"></div>
+      </section>
+
+      <!-- Section 4 - The night sky -->
+      <section>
+        <div class="side side--left">
+          <img
+            src="assets/images/section_4/city-front.svg"
+            alt="Big city with buildings"
+            id="city-front"
+          />
+        </div>
+        <div class="side side--right">
+          <img
+            src="assets/images/section_4/city-landscape.svg"
+            alt="City in the horizon"
+            id="city-landscape"
+          />
+          <img
+            src="assets/images/section_4/city-back.svg"
+            alt="Distant city"
+            id="city-back"
+          />
+        </div>
+        <p class="polluted polluted--fade">
+          More than 80% of the world and more than 99% of the U.S. and European
+          populations live under light-polluted skies.
+        </p>
+        <button class="polluted" id="lightswitch">Dim the lights</button>
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_4/light-beam-left.svg"
+          alt="Polluted lightbeam reflecting from city"
+          id="light-beam-left"
+        />
+        <img
+          class="polluted lightbeam"
+          src="assets/images/section_4/light-beam-right.svg"
+          alt="Polluted lights from city"
+          id="light-beam-right"
+        />
+
+        <!-- Dimmed -->
+        <p class="dimmed dimmed--fade">
+          Without light pollution, we get to see more of the incredible night
+          sky. This will increase our chances of seeing natural phenomenons like
+          shooting stars, the milky way or the northern lights.
+        </p>
+        <img
+          class="dimmed"
+          src="assets/images/section_4/shooting-star.svg"
+          alt="Shooting star"
+          id="shooting-star"
+        />
+        <p id="direction--scroll-up" class="dimmed dimmed--fade direction">
+          Scroll back up
+        </p>
+        <img
+          id="arrow-up"
+          class="dimmed dimmed--fade"
+          src="assets/images/section_1/arrow_intro.svg"
+          alt="Scroll up"
+        />
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+  </body>
 </html>

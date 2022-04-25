@@ -34,7 +34,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#setup">Setup</a></li>
       </ul>
     </li>
     <li>
@@ -97,10 +96,6 @@ Below you will find information about how to install and set up the project on y
     ```sh
     git clone https://github.com/baxita/light-pollution.git
     ```
-
-### Setup
-
-_Information about setup coming soon..._
 
 ---
 
