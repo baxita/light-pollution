@@ -110,7 +110,7 @@ There are two developers in the group that created and maintains this project. Y
 | Developer | Github                                         | E-mail                |
 | --------- | ---------------------------------------------- | --------------------- |
 | Kjersti   | [@baxita](https://github.com/baxita)           | kjersab@stud.ntnu.no  |
-| Ida       | [@icanseetime](https://github.com/icanseetime) | imgjeits@stud.ntnu.no |
+| Isak      | [@icanseetime](https://github.com/icanseetime) | imgjeits@stud.ntnu.no |
 
 ---
 
